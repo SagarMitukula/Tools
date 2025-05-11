@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image to PNG Converter - Multi-Tools</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="../css/style.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header will be dynamically loaded -->
+    <div id="header-placeholder"></div>
+
+    <!-- Main Content -->
+    <main class="container py-4">
+        <div class="row">
+            <!-- Tool Content -->
+            <div class="col-lg-8">
+                <h1 class="mb-4">Image to PNG Converter</h1>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="tool-container">
+                            <div class="upload-area mb-4" id="dropZone">
+                                <div class="text-center p-5 border rounded">
+                                    <i class="fas fa-cloud-upload-alt fa-3x mb-3"></i>
+                                    <h4>Drag & Drop your image here</h4>
+                                    <p>or</p>
+                                    <input type="file" id="fileInput" class="d-none" accept="image/*">
+                                    <button class="btn btn-primary" onclick="document.getElementById('fileInput').click()">
+                                        Choose File
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="preview-area mb-4 d-none" id="previewArea">
+                                <h5>Preview</h5>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <h6>Original Image</h6>
+                                                <img id="originalPreview" class="img-fluid mb-2" alt="Original image preview">
+                                                <p id="originalInfo" class="small text-muted"></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <h6>PNG Preview</h6>
+                                                <img id="pngPreview" class="img-fluid mb-2" alt="PNG preview">
+                                                <p id="pngInfo" class="small text-muted"></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="options-area mb-4">
+                                <h5>Conversion Options</h5>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="preserveTransparency" checked>
+                                    <label class="form-check-label" for="preserveTransparency">
+                                        Preserve Transparency
+                                    </label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="optimizeSize">
+                                    <label class="form-check-label" for="optimizeSize">
+                                        Optimize File Size
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="action-buttons">
+                                <button class="btn btn-primary" id="convertBtn" disabled>
+                                    <i class="fas fa-exchange-alt"></i> Convert to PNG
+                                </button>
+                                <button class="btn btn-success" id="downloadBtn" disabled>
+                                    <i class="fas fa-download"></i> Download PNG
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="col-lg-4">
+                <!-- Ad Section -->
+                <div class="ad-container mb-4">
+                    <div class="ad-placeholder">Advertisement Space</div>
+                </div>
+
+                <!-- Related Tools -->
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Related Tools</h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-2">
+                                <a href="image-resizer.html" class="text-decoration-none">
+                                    <i class="fas fa-expand-alt"></i> Image Resizer
+                                </a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="image-compressor.html" class="text-decoration-none">
+                                    <i class="fas fa-compress-alt"></i> Image Compressor
+                                </a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="image-to-jpg.html" class="text-decoration-none">
+                                    <i class="fas fa-file-image"></i> Image to JPG Converter
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer will be dynamically loaded -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="../js/main.js"></script>
+    <script src="../js/tools/image-to-png.js"></script>
+</body>
+</html> 

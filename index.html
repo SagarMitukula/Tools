@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Tools Website - 100+ Free Online Tools</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header will be dynamically loaded -->
+    <div id="header-placeholder"></div>
+
+    <!-- Main Content -->
+    <main class="container py-4">
+        <!-- Search Section -->
+        <section class="search-section mb-4">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="input-group">
+                        <input type="text" id="toolSearch" class="form-control" placeholder="Search for tools...">
+                        <button class="btn btn-primary" type="button">
+                            <i class="fas fa-search"></i> Search
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tools Grid -->
+        <section class="tools-grid">
+            <!-- Image Tools Section -->
+            <div class="category-section mb-4" id="image-tools">
+                <h2 class="category-title">Image Tools</h2>
+                <div class="row g-4">
+                    <div class="col-md-4 col-lg-3">
+                        <div class="card h-100 tool-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Image to PNG Converter</h5>
+                                <p class="card-text">Convert images to PNG format easily.</p>
+                                <a href="tools/image-to-png.html" class="btn btn-primary">Use Tool</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-lg-3">
+                        <div class="card h-100 tool-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Image Resizer</h5>
+                                <p class="card-text">Resize your images to any dimension.</p>
+                                <a href="tools/image-resizer.html" class="btn btn-primary">Use Tool</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-lg-3">
+                        <div class="card h-100 tool-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Image Compressor</h5>
+                                <p class="card-text">Compress images without losing quality.</p>
+                                <a href="tools/image-compressor.html" class="btn btn-primary">Use Tool</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-lg-3">
+                        <div class="card h-100 tool-card">
+                            <div class="card-body">
+                                <h5 class="card-title">QR Code Generator</h5>
+                                <p class="card-text">Create custom QR codes for any content.</p>
+                                <a href="tools/qr-generator.html" class="btn btn-primary">Use Tool</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SEO Tools Section -->
+            <div class="category-section mb-4" id="seo-tools">
+                <h2 class="category-title">SEO Tools</h2>
+                <div class="row g-4">
+                    <div class="col-md-4 col-lg-3">
+                        <div class="card h-100 tool-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Meta Tag Generator</h5>
+                                <p class="card-text">Generate SEO-friendly meta tags.</p>
+                                <a href="tools/meta-tag-generator.html" class="btn btn-primary">Use Tool</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-lg-3">
+                        <div class="card h-100 tool-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Keyword Density Checker</h5>
+                                <p class="card-text">Analyze keyword density in your content.</p>
+                                <a href="tools/keyword-density.html" class="btn btn-primary">Use Tool</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-lg-3">
+                        <div class="card h-100 tool-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Sitemap Generator</h5>
+                                <p class="card-text">Create XML sitemaps for your website.</p>
+                                <a href="tools/sitemap-generator.html" class="btn btn-primary">Use Tool</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-lg-3">
+                        <div class="card h-100 tool-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Robots.txt Generator</h5>
+                                <p class="card-text">Generate robots.txt files for your site.</p>
+                                <a href="tools/robots-generator.html" class="btn btn-primary">Use Tool</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Text Tools Section -->
+            <div class="category-section mb-4" id="text-tools">
+                <h2 class="category-title">Text Tools</h2>
+                <div class="row g-4">
+                    <div class="col-md-4 col-lg-3">
+                        <div class="card h-100 tool-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Word Counter</h5>
+                                <p class="card-text">Count words, characters, and paragraphs.</p>
+                                <a href="tools/word-counter.html" class="btn btn-primary">Use Tool</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-lg-3">
+                        <div class="card h-100 tool-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Case Converter</h5>
+                                <p class="card-text">Convert text to different cases.</p>
+                                <a href="tools/case-converter.html" class="btn btn-primary">Use Tool</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-lg-3">
+                        <div class="card h-100 tool-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Text to Speech</h5>
+                                <p class="card-text">Convert text to spoken words.</p>
+                                <a href="tools/text-to-speech.html" class="btn btn-primary">Use Tool</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-lg-3">
+                        <div class="card h-100 tool-card">
+                            <div class="card-body">
+                                <h5 class="card-title">URL Encoder/Decoder</h5>
+                                <p class="card-text">Encode or decode URLs easily.</p>
+                                <a href="tools/url-encoder.html" class="btn btn-primary">Use Tool</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Developer Tools Section -->
+            <div class="category-section mb-4" id="developer-tools">
+                <h2 class="category-title">Developer Tools</h2>
+                <div class="row g-4">
+                    <div class="col-md-4 col-lg-3">
+                        <div class="card h-100 tool-card">
+                            <div class="card-body">
+                                <h5 class="card-title">JSON Formatter</h5>
+                                <p class="card-text">Format and validate JSON data.</p>
+                                <a href="tools/json-formatter.html" class="btn btn-primary">Use Tool</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-lg-3">
+                        <div class="card h-100 tool-card">
+                            <div class="card-body">
+                                <h5 class="card-title">CSS Minifier</h5>
+                                <p class="card-text">Minify CSS code for production.</p>
+                                <a href="tools/css-minifier.html" class="btn btn-primary">Use Tool</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-lg-3">
+                        <div class="card h-100 tool-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Color Picker</h5>
+                                <p class="card-text">Pick and convert colors easily.</p>
+                                <a href="tools/color-picker.html" class="btn btn-primary">Use Tool</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-lg-3">
+                        <div class="card h-100 tool-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Base64 Encoder</h5>
+                                <p class="card-text">Encode/decode Base64 strings.</p>
+                                <a href="tools/base64-encoder.html" class="btn btn-primary">Use Tool</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ad Section -->
+            <div class="ad-section mb-4">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="ad-container">
+                            <!-- AdSense code will be placed here -->
+                            <div class="ad-placeholder">Advertisement Space</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer will be dynamically loaded -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+</html> 

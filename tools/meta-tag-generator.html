@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meta Tag Generator - Multi-Tools</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="../css/style.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header will be dynamically loaded -->
+    <div id="header-placeholder"></div>
+
+    <!-- Main Content -->
+    <main class="container py-4">
+        <div class="row">
+            <!-- Tool Content -->
+            <div class="col-lg-8">
+                <h1 class="mb-4">Meta Tag Generator</h1>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="tool-container">
+                            <form id="metaTagForm">
+                                <!-- Basic Meta Tags -->
+                                <div class="mb-4">
+                                    <h5>Basic Meta Tags</h5>
+                                    <div class="mb-3">
+                                        <label for="pageTitle" class="form-label">Page Title</label>
+                                        <input type="text" class="form-control" id="pageTitle" 
+                                            placeholder="Enter your page title (50-60 characters)" maxlength="60">
+                                        <div class="form-text">Recommended length: 50-60 characters</div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="metaDescription" class="form-label">Meta Description</label>
+                                        <textarea class="form-control" id="metaDescription" rows="3" 
+                                            placeholder="Enter your meta description (150-160 characters)" maxlength="160"></textarea>
+                                        <div class="form-text">Recommended length: 150-160 characters</div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="keywords" class="form-label">Keywords</label>
+                                        <input type="text" class="form-control" id="keywords" 
+                                            placeholder="Enter keywords separated by commas">
+                                        <div class="form-text">Separate keywords with commas</div>
+                                    </div>
+                                </div>
+
+                                <!-- Open Graph Meta Tags -->
+                                <div class="mb-4">
+                                    <h5>Open Graph Meta Tags</h5>
+                                    <div class="mb-3">
+                                        <label for="ogTitle" class="form-label">OG Title</label>
+                                        <input type="text" class="form-control" id="ogTitle" 
+                                            placeholder="Enter Open Graph title">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="ogDescription" class="form-label">OG Description</label>
+                                        <textarea class="form-control" id="ogDescription" rows="2" 
+                                            placeholder="Enter Open Graph description"></textarea>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="ogImage" class="form-label">OG Image URL</label>
+                                        <input type="url" class="form-control" id="ogImage" 
+                                            placeholder="Enter image URL for social sharing">
+                                    </div>
+                                </div>
+
+                                <!-- Twitter Card Meta Tags -->
+                                <div class="mb-4">
+                                    <h5>Twitter Card Meta Tags</h5>
+                                    <div class="mb-3">
+                                        <label for="twitterCard" class="form-label">Twitter Card Type</label>
+                                        <select class="form-select" id="twitterCard">
+                                            <option value="summary">Summary</option>
+                                            <option value="summary_large_image">Summary Large Image</option>
+                                            <option value="app">App</option>
+                                            <option value="player">Player</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="twitterTitle" class="form-label">Twitter Title</label>
+                                        <input type="text" class="form-control" id="twitterTitle" 
+                                            placeholder="Enter Twitter card title">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="twitterDescription" class="form-label">Twitter Description</label>
+                                        <textarea class="form-control" id="twitterDescription" rows="2" 
+                                            placeholder="Enter Twitter card description"></textarea>
+                                    </div>
+                                </div>
+
+                                <!-- Additional Meta Tags -->
+                                <div class="mb-4">
+                                    <h5>Additional Meta Tags</h5>
+                                    <div class="mb-3">
+                                        <label for="author" class="form-label">Author</label>
+                                        <input type="text" class="form-control" id="author" 
+                                            placeholder="Enter author name">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="robots" class="form-label">Robots</label>
+                                        <select class="form-select" id="robots">
+                                            <option value="index,follow">Index, Follow</option>
+                                            <option value="noindex,follow">No Index, Follow</option>
+                                            <option value="index,nofollow">Index, No Follow</option>
+                                            <option value="noindex,nofollow">No Index, No Follow</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="canonical" class="form-label">Canonical URL</label>
+                                        <input type="url" class="form-control" id="canonical" 
+                                            placeholder="Enter canonical URL">
+                                    </div>
+                                </div>
+
+                                <div class="action-buttons">
+                                    <button type="submit" class="btn btn-primary">
+                                        <i class="fas fa-code"></i> Generate Meta Tags
+                                    </button>
+                                    <button type="button" class="btn btn-success" id="copyBtn" disabled>
+                                        <i class="fas fa-copy"></i> Copy to Clipboard
+                                    </button>
+                                </div>
+                            </form>
+
+                            <!-- Generated Meta Tags -->
+                            <div class="mt-4 d-none" id="generatedTags">
+                                <h5>Generated Meta Tags</h5>
+                                <div class="card">
+                                    <div class="card-body">
+                                        <pre id="metaTagsOutput" class="bg-light p-3 rounded"></pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="col-lg-4">
+                <!-- Ad Section -->
+                <div class="ad-container mb-4">
+                    <div class="ad-placeholder">Advertisement Space</div>
+                </div>
+
+                <!-- Related Tools -->
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Related Tools</h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-2">
+                                <a href="keyword-density.html" class="text-decoration-none">
+                                    <i class="fas fa-chart-bar"></i> Keyword Density Checker
+                                </a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="sitemap-generator.html" class="text-decoration-none">
+                                    <i class="fas fa-sitemap"></i> Sitemap Generator
+                                </a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="robots-generator.html" class="text-decoration-none">
+                                    <i class="fas fa-robot"></i> Robots.txt Generator
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer will be dynamically loaded -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="../js/main.js"></script>
+    <script src="../js/tools/meta-tag-generator.js"></script>
+</body>
+</html> 

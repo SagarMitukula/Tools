@@ -1,0 +1,103 @@
+/* Global Styles */
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --background-color: #f8f9fa;
+    --card-hover-color: #e9ecef;
+}
+
+body {
+    background-color: var(--background-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header Styles */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Search Section */
+.search-section {
+    padding: 2rem 0;
+}
+
+.search-section .input-group {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Category Section */
+.category-title {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+/* Tool Cards */
+.tool-card {
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.tool-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    background-color: var(--card-hover-color);
+}
+
+.tool-card .card-title {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.tool-card .btn-primary {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+/* Ad Section */
+.ad-container {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.ad-placeholder {
+    padding: 2rem;
+    background-color: #f8f9fa;
+    border: 2px dashed #dee2e6;
+    border-radius: 0.5rem;
+    color: var(--secondary-color);
+}
+
+/* Footer */
+footer {
+    background-color: #343a40;
+    color: #fff;
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .category-section {
+        margin-bottom: 2rem;
+    }
+    
+    .tool-card {
+        margin-bottom: 1rem;
+    }
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.tool-card {
+    animation: fadeIn 0.5s ease-in;
+} 
